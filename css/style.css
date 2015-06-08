@@ -56,7 +56,7 @@ div.gImage {
 	display: inline-block;
 	background-size: cover;
 	background-repeat: no-repeat;
-	margin: 10px;
+	margin: 15px 0 0 15px;
 	cursor: pointer;
 }
 div.gImage p{

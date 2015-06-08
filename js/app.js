@@ -43,7 +43,7 @@ function populateEntries(e){
             idiv.entry = entry;
             idiv.className = "gImage";
             gdiv.appendChild(idiv)
-            idiv.addEventListener('click', showLargeImage);
+            idiv.addEventListener('click', showLargeImage, false);
           }
           e.target.once = true;
         }
@@ -56,10 +56,15 @@ function populateEntries(e){
   id_req.send(null);
 }
 function showLargeImage(e){
+  var elem = e.target
+  console.log(elem);
+  if (elem.nodeName == 'P')
+    elem = e.target.parentNode;
+  console.log(elem);
   var lih = document.createElement('div');
   lih.id = "lih"
   var image = document.createElement("img");
-  image.src = "data:image;base64,"+e.target.entry.image;
+  image.src = "data:image;base64,"+elem.entry.image;
   image.width = "790";
   image.style.cursor = "pointer";
   lih.appendChild(image);
