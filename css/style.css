@@ -1,12 +1,15 @@
 * {
 	font-family: 'Roboto';
 	font-weight: 300;
-	padding: 0;
 	margin: 0;
 	position: relative;
 }
 body {
-	width: 810px;
+	width: 790px;
+}
+h1, h2 { 
+	font-weight: 700;
+	margin: 15px 0;
 }
 .upper-case {
 	text-transform: uppercase;
@@ -14,19 +17,21 @@ body {
 #nav {
 	border-bottom: 1px solid #eee;
 }
-ul {
+#nav ul {
 	display: inline-block;
+	padding: 0;
 }
-ul a {
+#nav ul a {
 	color: #4a8ed1;
 	cursor: pointer;
 	font-weight: 700;
 }
-ul >li {
+#nav ul >li {
 	height: 100%;
 	list-style-type: none;
 	display: inline-block;
-	padding: 40px 40px 40px 0;
+	padding: 40px 0 40px 0;
+	margin-right: 40px;
 	font-size: 20px;
 }
 #new-entry {
@@ -39,4 +44,97 @@ ul >li {
 	padding: 15px;
 	top: 50%;
 	right: 0;
+	transform: translate(0, -50%);
+	cursor: pointer;
+}
+#entries-section{
+	display: none;
+}
+div.gImage {
+	width: 180px;
+	height: 180px;
+	display: inline-block;
+	background-size: cover;
+	background-repeat: no-repeat;
+	margin: 10px;
+	cursor: pointer;
+}
+div.gImage p{
+	background-color: rgba(0,0,0,.5);
+	position: absolute;
+	bottom: 0;
+	color: #fff;
+	width: 100%;
+	padding: 20px;
+	box-sizing: border-box;
+}
+div.gImage p:first-line{
+	font-weight: 700;
+}
+#lih {
+	width: 790px;
+	height: 400px;
+	background-color: #000;
+}
+
+/* Imported from the old app */
+#choose{
+	display: none;
+  position: absolute;
+  top: 295px;
+  left: 295px;
+  width: 280px;
+  height: 280px;
+  border: 20px solid #fff;
+  background-color: #fff;
+  box-sizing: border-box;
+}
+#choose >div{
+  float: left;
+  width: 120px;
+  height: 100%;
+  text-align: center;
+  box-sizing: border-box;
+  padding: 50px 10px 0;
+  cursor: pointer;
+}
+#choose >div:hover {
+  background-color: #ccc;
+}
+#choose > div + div {
+  float: right;
+}
+#fakeButton {
+  position: relative;
+  overflow: hidden;
+  width: 100px;
+  height: 100px;
+  font-size: 16px;
+  background-image: url('../images/upload.gif');
+}
+#fileButton{
+  position: absolute;
+  top: 0;
+  right: 0;
+  opacity: 0;
+  height: 100%;
+}
+#loadedPhotos{
+  width: 500px;
+  height: 500px;
+  background-color: #fff;
+  border: 20px solid #fff;
+  position: absolute;
+  top: 135px;
+  left: 135px;
+  display: none;
+  overflow: auto;
+}
+#loadedPhotos img{
+  border: 3px solid #fff;
+  padding: 1px;
+  margin: 1px;
+}
+#loadedPhotos img:hover{
+  border: 3px solid #aaa;
 }

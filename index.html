@@ -3,25 +3,63 @@
 <head>
 	<title>Be a Polar Pop Star</title>
 	<link rel="stylesheet" type="text/css" href="css/style.css">
-	<link href='http://fonts.googleapis.com/css?family=Roboto:300,700' rel='stylesheet' type='text/css'>
+	<link href='//fonts.googleapis.com/css?family=Roboto:300,700' rel='stylesheet' type='text/css'>
 	<script src="js/facebook.js" type="text/javascript"></script>
 </head>
-<body id="fb-root">
+<body>
 	<img width="100%" src="images/banner.jpg" />
 	<section id="nav">
-	<ul>
-		<li>
-			<a class="upper-case" id="about-contest">About this Contest</a>
-		</li>
-		<li>
-			<a class="upper-case" id="view-entries">View Entries</a>
-		</li>
-		<li>
-			<a class="upper-case" id="winners">Winners</a>
-		</li>
-	</ul>
-	<button class="upper-case" id="new-entry">Submit an entry</button>
+  	<ul>
+  		<li class="nav" style="border-bottom: 3px solid #4a8ed1">
+  			<a class="upper-case" id="about-contest">About this Contest</a>
+  		</li>
+  		<li class="nav">
+  			<a class="upper-case" id="view-entries">View Entries</a>
+  		</li>
+  		<li class="nav">
+  			<a class="upper-case" id="winners">Winners</a>
+  		</li>
+  	</ul>
+    <div id="fb-root"></div>
+    <button class="upper-case" id="new-entry">Submit an entry</button>
 	</section>
+	<section id="about-section" class="hidable">
+		<h1>HOW TO ENTER</h1>
+
+    <h2>Here's how to submit your photo for a chance to win:</h2>
+    <ul>
+      <li>Snap a selfie of you and a Polar Pop cup.</li>
+      <li>Share your selfie by clicking the Submit and Entry button and filling out the form.</li>
+      <li>You may also enter the contest by posting your picture on Instagram with the hashtag &num;PolarPopCup.</li>
+      <li>Daily Prize winners will receive a cup of Polar Pop FREE every day for a year.</li>
+      <li>One Grand Prize winner will be randomly selected at the end of the promotion period. For more information, see the Official Rules  <a href="CK_BeInNextCommerical_Official Rules_052915.pdf" target="_blank">here</a></li>
+      <li>Contestants may enter as often as they like, however each photograph must be original, duplicates will be considered as one entry.</li>
+    </ul>
+     
+    <h2>PRIZE DETAILS</h2>
+     
+    <p>Grand Prize:  Featured role in the next Circle K Polar Pop Television Commercial.</p>
+    <p>Daily Prizes:  FREE Polar Pop For a Year awarded as a &dollar;275.00 Circle K Gift Card.</p>
+
+    <p style="font-size: xx-small; margin-top: 50px;">This promotion is in no way sponsored, endorsed or administered by, or associated with, Facebook. By participating, you hereby release and hold harmless Facebook from any and all liability associated with this promotion.</p>
+
+	</section>
+  <section id="entries-section" class="hidable">
+    
+  </section>
+  <div id="choose">
+    <div id="fbchoice">
+      <img src="images/fb.gif" />
+      Choose from FaceBook
+    </div>
+    <div id="upload">
+      <div id="fakeButton">
+        <input type="file" id="fileButton" />
+      </div>
+      Chose from Device
+    </div>
+  </div>
+  <div id="loadedPhotos"></div>
 	<script type="text/javascript" src="js/app.js"></script>
 </body>
 </html>
