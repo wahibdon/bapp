@@ -47,8 +47,22 @@ h1, h2 {
 	transform: translate(0, -50%);
 	cursor: pointer;
 }
-#entries-section{
+#entries-section, #winners-section{
 	display: none;
+}
+#winners-section table {
+	width: 100%;
+}
+#winners-section th {
+	text-align: left;
+	font-weight: 600;
+}
+#winners-section th:first-child,
+#winners-section td:first-child {
+	display: none;
+}
+#winners-section tbody tr:nth-child(odd){
+	background-color: #ccc;
 }
 div.gImage {
 	width: 180px;

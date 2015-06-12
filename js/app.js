@@ -9,7 +9,7 @@ function tabs(e){
     lih.parentNode.removeChild(lih);
   }catch(e){}
   var hidables = document.querySelectorAll('.hidable');
-  hidables[0].style.display = hidables[1].style.display = "none";
+  hidables[0].style.display = hidables[1].style.display = hidables[2].style.display = "none";
   var nav = document.querySelectorAll('.nav');
   nav[0].style.borderBottom = nav[1].style.borderBottom = nav[2].style.borderBottom = "none";
   e.target.parentNode.style.borderBottom = "3px solid #4a8ed1"
@@ -19,6 +19,10 @@ function tabs(e){
       break;
     case "view-entries":
       document.getElementById('entries-section').style.display = "block";
+      break;
+    case "winners":
+      document.getElementById('winners-section').style.display = "block";
+      break;
   }
 }
 function populateEntries(e){
@@ -184,3 +188,11 @@ function loadPhotos (){
     } 
   });
 }
+var xhr = new XMLHttpRequest();
+xhr.onreadystatechange = function(){
+    if(this.readyState == 4 && this.status == 200){
+      document.getElementById("winners-section").innerHTML = this.response;
+    }
+}
+xhr.open('get', "winners.php");
+xhr.send(null);
