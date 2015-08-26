@@ -89,7 +89,7 @@ function removeClass (haystack, needle){
   }
   return cHaystack;
 }
-document.getElementById("new-entry").addEventListener('click', function(){
+/*document.getElementById("new-entry").addEventListener('click', function(){
   FB.login(function(response) {
     if(response.status == 'connected'){
       document.getElementById('choose').style.display = "block";
@@ -107,7 +107,7 @@ document.getElementById("new-entry").addEventListener('click', function(){
   }, {scope: 'public_profile,email,user_photos,user_location', 
     return_scopes: true
   });
-})
+})*/
 document.getElementById('fileButton').addEventListener('change', function (){
   var choose = document.getElementById('choose');
   var data = new FormData();
